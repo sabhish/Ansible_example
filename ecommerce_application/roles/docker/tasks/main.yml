@@ -31,10 +31,10 @@
    # - python2.7-dev
    # - selinux-utils
 
-- name: docker | Upgrade pip
-  pip:
-    name: pip
-    extra_args: --upgrade
+#- name: docker | Upgrade pip
+#  pip:
+ #   name: pip
+ #   extra_args: --upgrade
 
 - name: Install apt key for docker repo
   apt_key:
