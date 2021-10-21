@@ -77,7 +77,7 @@
 
 - name: Change docker group ID
   become: yes
-  command: groupmod --gid 998 docker
+  command: groupmod --gid 1002 docker
 
 # Configure proxy settings.
 
