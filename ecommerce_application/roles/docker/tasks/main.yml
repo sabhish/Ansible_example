@@ -18,18 +18,18 @@
     
 - name: Install docker dependencies
   apt:
-    name: "{{ item }}"
+    name: ['linux-image-extra-virtual', 'apt-transport-https', 'ca-certificates', 'selinux-utils','python3', 'python3-pip']
     update_cache: yes
-  with_items:
+ # with_items:
     #- linux-image-extra-{{ kernel_version.stdout }}
-    - linux-image-extra-virtual
-    - apt-transport-https
-    - ca-certificates
-    - python3
+    #- linux-image-extra-virtual
+    #- apt-transport-https
+    #- ca-certificates
+    #- python3
    # - python-pip
-    - python3-pip
-    - python2.7-dev
-    - selinux-utils
+   # - python3-pip
+   # - python2.7-dev
+   # - selinux-utils
 
 - name: docker | Upgrade pip
   pip:
