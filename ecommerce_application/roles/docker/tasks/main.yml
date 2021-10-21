@@ -52,9 +52,10 @@
     update_cache: yes
 
 - name: Install docker-engine
-  apt:
-    name: ['docker-ce', 'docker-ce-cli', 'containerd.io']
-    update_cache: yes
+  shell:
+    sudo apt install -y docker-ce docker-ce-cli containerd.io
+    #name: ['docker-ce', 'docker-ce-cli', 'containerd.io']
+    #update_cache: yes
 
 - name: Add docker access
   become: yes
