@@ -12,7 +12,7 @@
     dest: /tmp/eShopOnContainers/src/.env
     
 - name: database | Install database
-  command: chdir=/tmp/eShopOnContainers/src/ docker-compose -f docker-compose-db.yml -f docker-compose-db.override.yml build
+  command: chdir=/tmp/eShopOnContainers/src/ docker-compose -f docker-compose-db.yml -f docker-compose-db.override.yml build --build-arg http_proxy=$http_proxy --build-arg https_proxy=$http_proxy
 
 - name: database | Bring up database
   command: chdir=/tmp/eShopOnContainers/src/ docker-compose -f docker-compose-db.yml -f docker-compose-db.override.yml up -d 
